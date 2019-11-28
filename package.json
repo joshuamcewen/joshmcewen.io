@@ -1,0 +1,31 @@
+{
+  "name": "joshmcewen.io",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "Josh McEwen <joshua@joshuamcewen.co.uk>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "server": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.7.1",
+    "eslint-plugin-react": "^7.16.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-jss": "^10.0.0"
+  }
+}
