@@ -36,10 +36,10 @@ export default {
     },
     container: {
         composes: 'Hero__container',
-        width: '100%',
+        width: 'calc(100% - 4rem)',
         maxWidth: '35rem',
         color: '#fff',
-        padding: '0 2rem',
+        padding: '2rem',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -99,8 +99,15 @@ export default {
         composes: 'Hero__links',
         padding: '0 0 2rem',
         display: 'flex',
+        flexWrap: 'wrap',
         width: '100%',
         flexBasis: '0',
+        flexDirection: 'column',
+        margin: '1rem 0',
+
+        '@media(min-width: 30rem)': {
+            flexDirection: 'row'
+        }
     },
     link: {
         composes: 'Hero__link',
