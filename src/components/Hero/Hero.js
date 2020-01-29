@@ -16,8 +16,7 @@ const Hero = ({ classes }) => (
                     Manchester Metropolitan University.
                 </p>
                 <p className={classes.smallprint}>
-                    Having recently finished a placement, I&apos;m now looking
-                    for graduate opportunities starting June 2020. Check out my
+                    I&apos;m currently working on developing full stack applications using a variety of programming languages, some of which are listed below. Check out my
                     links below to get in touch!
                 </p>
                 <h2 className={classes.skillsHeader}>
