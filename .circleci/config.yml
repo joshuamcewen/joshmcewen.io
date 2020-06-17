@@ -1,32 +1,35 @@
 jobs:
   build_and_deploy:
     docker:
-      - image: 'google/cloud-sdk:alpine'
+      - image: google/cloud-sdk:alpine
+    working_directory: /app
     steps:
       - checkout
-      - cloudrun/init
-      - cloudrun/build:
-          tag: 'gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_SHA1}'
-      - cloudrun/deploy:
-          image: 'gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_SHA1}'
-          platform: managed
-          region: ${GOOGLE_COMPUTE_ZONE}
-          service-name: website
-          unauthenticated: true
+      - gcp-cli/install
+      - gcp-cli/initialize
+      - run:
+          name: Submit build to Cloud Build
+          command: |
+            gcloud builds submit \
+              --tag gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_SHA1}
+      - run:
+          name: Deploy to Cloud Run
+          command: |
+            gcloud run deploy website \
+              --image gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_SHA1} \
+              --platform managed \
+              --region ${GOOGLE_COMPUTE_ZONE} \
+              --allow-unauthenticated
       - run:
           name: Cleanup Container Registry
           command: gcloud container images delete gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_SHA1}:latest
 orbs:
-  cloudrun: circleci/gcp-cloud-run@1.0.2
+  gcp-cli: circleci/gcp-cli@1.8.4
 version: 2.1
 workflows:
   build_and_deploy:
     jobs:
-      - deploy_hold:
-          type: approval
-          filters:
-            branches: 
-              only: master
       - build_and_deploy:
-          requires:
-            - deploy_hold
+          filters:
+            branches:
+              only: master
