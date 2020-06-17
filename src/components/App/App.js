@@ -12,8 +12,8 @@ const App = ({ classes }) => (
 
         <p>
             <span className={classes.highlight}>Hi, I&apos;m Josh</span> 👋🏼 — A
-            final year Software Engineering Student at Manchester Metropolitan
-            University.
+            Software Engineering graduate having recently completed my degree,
+            with First Class Honours, at Manchester Metropolitan University.
         </p>
         <p>
             In <strong>2018/19</strong>, I spent fifteen months on placement as
@@ -34,6 +34,7 @@ const App = ({ classes }) => (
             <li>MongoDB</li>
             <li>MySQL</li>
             <li>PHP</li>
+            <li>Go</li>
             <li>Java</li>
             <li>HTML</li>
             <li>CSS</li>
@@ -56,7 +57,7 @@ const App = ({ classes }) => (
 );
 
 App.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(App);
