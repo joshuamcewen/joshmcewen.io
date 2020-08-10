@@ -11,19 +11,10 @@ const App = ({ classes }) => (
         <h2 className={classes.location}>Manchester, UK</h2>
 
         <p>
-            <span className={classes.highlight}>Hi, I&apos;m Josh</span> 👋🏼 — A
-            Software Engineering graduate having recently completed my degree,
-            with First Class Honours, at Manchester Metropolitan University.
+            <span className={classes.highlight}>Hi, I&apos;m Josh</span> 👋🏼 — A Software Engineer at Lavatech in Manchester, UK. I help build and maintain communications platforms for law firms and their clients, with a focus on frontend applications and UX.
         </p>
         <p>
-            In <strong>2018/19</strong>, I spent fifteen months on placement as
-            a junior developer, building and maintaining a ticketing platform
-            for festivals and events.
-        </p>
-        <p>
-            More recently, I&apos;ve just completed a final year project on
-            engineering web applications that embody usability and accessibility
-            techniques.
+            I graduated from Manchester Metropolitan University in June 2020 with First Class Honours in BSc Software Engineering. During my degree, I undertook a placement year, developing a booking platform for a festival and event ticketing company in Manchester, UK. 
         </p>
 
         <h3 className={classes.subheader}>Technologies</h3>
@@ -31,6 +22,7 @@ const App = ({ classes }) => (
             <li>JavaScript</li>
             <li>Node.js</li>
             <li>React</li>
+            <li>Vue</li>
             <li>MongoDB</li>
             <li>MySQL</li>
             <li>PHP</li>
