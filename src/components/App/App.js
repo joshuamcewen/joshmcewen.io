@@ -11,7 +11,7 @@ const App = ({ classes }) => (
         <h2 className={classes.location}>Manchester, UK</h2>
 
         <p>
-            <span className={classes.highlight}>Hi, I&apos;m Josh</span> 👋🏼 — An Associate at AND Digital in Manchester, UK. Before AND, I worked in the legal tech and event ticketing sectors.
+            <span className={classes.highlight}>Hi, I&apos;m Josh</span> 👋🏼 — A Product Developer at AND Digital in Manchester, UK. Before AND, I worked in the legal tech and event ticketing sectors.
         </p>
         <p>
             I graduated from Manchester Metropolitan University in June 2020 with First Class Honours in BSc Software Engineering. During my degree, I undertook a placement year, developing a booking platform for a festival and event ticketing company in Manchester, UK. 
